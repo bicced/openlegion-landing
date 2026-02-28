@@ -1,10 +1,12 @@
 import { Navbar } from "@/components/navbar";
 import { Hero } from "@/components/hero";
+import { Comparison } from "@/components/comparison";
 import { Features } from "@/components/features";
 import { UseCases } from "@/components/use-cases";
-import { Comparison } from "@/components/comparison";
 import { Architecture } from "@/components/architecture";
+import { Security } from "@/components/security";
 import { Quickstart } from "@/components/quickstart";
+import { FAQ } from "@/components/faq";
 import { CTA } from "@/components/cta";
 import { Footer } from "@/components/footer";
 
@@ -33,11 +35,13 @@ export default async function Home() {
       <Navbar />
       <main id="main">
         <Hero stars={stars} />
+        <Comparison />
         <Features />
         <UseCases />
-        <Comparison />
         <Architecture />
+        <Security />
         <Quickstart />
+        <FAQ />
         <CTA />
       </main>
       <Footer />
