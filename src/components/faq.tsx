@@ -33,6 +33,8 @@ export function FAQ() {
                   onClick={() => setOpen(isOpen ? null : i)}
                   className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left transition-colors hover:bg-card-hover/50"
                   aria-expanded={isOpen}
+                  aria-controls={`faq-answer-${i}`}
+                  id={`faq-question-${i}`}
                 >
                   <span className="text-sm font-medium text-foreground md:text-base">
                     {item.question}
@@ -45,6 +47,9 @@ export function FAQ() {
                   />
                 </button>
                 <div
+                  id={`faq-answer-${i}`}
+                  role="region"
+                  aria-labelledby={`faq-question-${i}`}
                   className={`grid transition-all duration-200 ease-in-out ${
                     isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
                   }`}

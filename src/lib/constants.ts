@@ -399,6 +399,8 @@ export const FOOTER_COLUMNS = [
       { label: "Features", href: "#features" },
       { label: "Use Cases", href: "#use-cases" },
       { label: "Architecture", href: "#architecture" },
+      { label: "Security", href: "#security" },
+      { label: "Enterprise", href: "#enterprise" },
       { label: "Quick Start", href: "#quickstart" },
     ],
   },
@@ -458,5 +460,15 @@ export const FAQ_ITEMS: FAQItem[] = [
     question: "Do I need Kubernetes or cloud infrastructure to run OpenLegion?",
     answer:
       "No. OpenLegion requires only Python 3.10+, Docker, and an LLM API key. It runs on a single machine with zero external dependencies — no Redis, no Kubernetes, no LangChain. Clone, install, and run your first fleet in under 60 seconds.",
+  },
+  {
+    question: "Is OpenLegion enterprise-ready?",
+    answer:
+      "Yes. OpenLegion is designed for enterprise deployment with on-premises support, deterministic YAML workflows, per-agent cost governance, role-based access controls, credential isolation via vault proxy, and an audit-ready codebase of ~25,000 lines with 1,550+ tests. All security layers are enabled by default.",
+  },
+  {
+    question: "Can OpenLegion run on-premises in air-gapped environments?",
+    answer:
+      "Yes. OpenLegion runs entirely on your own infrastructure with no external dependencies beyond Docker and Python. No data leaves your network. The full stack — coordinator, agents, vault, and dashboard — runs on a single machine, making it suitable for air-gapped and regulated environments.",
   },
 ];
