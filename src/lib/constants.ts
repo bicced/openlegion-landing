@@ -13,6 +13,12 @@ import {
   LayoutDashboard,
   Monitor,
   Plug,
+  Building2,
+  FileSearch,
+  GitBranch,
+  KeyRound,
+  Wallet,
+  UserCog,
   type LucideIcon,
 } from "lucide-react";
 
@@ -22,6 +28,7 @@ export const NAV_LINKS = [
   { label: "Features", href: "#features" },
   { label: "Use Cases", href: "#use-cases" },
   { label: "Architecture", href: "#architecture" },
+  { label: "Security", href: "#security" },
   { label: "Quick Start", href: "#quickstart" },
   { label: "Docs", href: "https://docs.openlegion.ai" },
 ] as const;
@@ -38,7 +45,7 @@ export const HERO = {
   titleLine1: "The AI agent framework",
   titleAccent: "built for production.",
   subtitle:
-    "Deploy autonomous agent fleets where every agent is container-isolated with its own budget, permissions, and secrets vault. No surprise bills. No leaked API keys.",
+    "Deploy autonomous agent fleets where every agent is container-isolated with its own budget, permissions, and secrets vault. No surprise bills. No leaked API keys. Self-hosted. Auditable. Enterprise-ready.",
   stats: [
     { value: 1550, label: "Tests Passing", suffix: "", prefix: "" },
     { value: 100, label: "LLM Providers", suffix: "+", prefix: "" },
@@ -333,6 +340,53 @@ export const SECURITY_LAYERS: SecurityLayer[] = [
     title: "Unicode Sanitization",
     description:
       "Invisible character stripping at three choke points — bidi overrides, tag chars, zero-width chars blocked before reaching LLM context.",
+  },
+];
+
+// ── Enterprise ──────────────────────────────────────────────────────────────
+
+export interface EnterpriseFeature {
+  icon: LucideIcon;
+  title: string;
+  description: string;
+}
+
+export const ENTERPRISE_FEATURES: EnterpriseFeature[] = [
+  {
+    icon: Building2,
+    title: "On-Premises Deployment",
+    description:
+      "Run the entire stack on your own infrastructure. No data leaves your network — full air-gap support for regulated environments.",
+  },
+  {
+    icon: FileSearch,
+    title: "Audit-Ready Codebase",
+    description:
+      "~25,000 lines of Python with 1,550+ tests. Small enough for a single security engineer to audit in a day — no hidden dependencies.",
+  },
+  {
+    icon: GitBranch,
+    title: "Deterministic Workflows",
+    description:
+      "YAML-defined task routing with no LLM decision-making in the control plane. Every execution path is predictable, repeatable, and auditable.",
+  },
+  {
+    icon: KeyRound,
+    title: "Credential Isolation",
+    description:
+      "Vault proxy architecture ensures agents never see API keys or secrets. Meets SOC 2 credential separation requirements out of the box.",
+  },
+  {
+    icon: Wallet,
+    title: "Per-Agent Cost Governance",
+    description:
+      "Set daily and monthly budgets per agent with real-time tracking. No surprise bills — automatic cutoff before limits are exceeded.",
+  },
+  {
+    icon: UserCog,
+    title: "Role-Based Access",
+    description:
+      "Per-agent ACL matrix controls which tools, files, and operations each agent can access. Enforce least-privilege across your entire fleet.",
   },
 ];
 

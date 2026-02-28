@@ -5,6 +5,7 @@ import { Features } from "@/components/features";
 import { UseCases } from "@/components/use-cases";
 import { Architecture } from "@/components/architecture";
 import { Security } from "@/components/security";
+import { Enterprise } from "@/components/enterprise";
 import { Quickstart } from "@/components/quickstart";
 import { FAQ } from "@/components/faq";
 import { CTA } from "@/components/cta";
@@ -40,6 +41,7 @@ export default async function Home() {
         <UseCases />
         <Architecture />
         <Security />
+        <Enterprise />
         <Quickstart />
         <FAQ />
         <CTA />
